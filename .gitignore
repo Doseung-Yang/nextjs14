@@ -1,0 +1,11 @@
+/node_modules # node_modules 추가
+.pnp
+.pnp.js
+.yarn/install-state.gz
+
+/coverage
+
+/.next/
+/out/
+/build
+node_modules
