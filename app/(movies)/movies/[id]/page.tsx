@@ -1,13 +1,15 @@
 import { Suspense } from "react";
-
 import MovieInfo from "../../../components/movie-info";
 import MovieVideos from "../../../components/movie-videos";
 
-export default async function MovieDetail({
-  params: { id },
-}: {
-  params: { id: string };
-}) {
+type Props = {
+  params: {
+    id: string;
+  };
+};
+
+export default async function MovieDetail({ params }: Props) {
+  const { id } = params;
   return (
     <div>
       <h3>Movie detail page</h3>
