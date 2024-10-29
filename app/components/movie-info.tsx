@@ -1,9 +1,5 @@
 import { API_URL } from "../(home)/page";
-<<<<<<< HEAD
-
-=======
 import potato from "../../styles/movie-info.module.css";
->>>>>>> a83c323 (hotpix:: movie data & CSS_Module 수정)
 async function getMovie(id: string) {
   await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch(`${API_URL}/${id}`);
@@ -12,9 +8,6 @@ async function getMovie(id: string) {
 
 export default async function MovieInfo({ id }: { id: string }) {
   const movie = await getMovie(id);
-<<<<<<< HEAD
-  return <h6>{JSON.stringify(movie)}</h6>;
-=======
   return (
     <div className={potato.container}>
       <img
@@ -32,5 +25,4 @@ export default async function MovieInfo({ id }: { id: string }) {
       </div>
     </div>
   );
->>>>>>> a83c323 (hotpix:: movie data & CSS_Module 수정)
 }
