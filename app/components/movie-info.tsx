@@ -1,7 +1,8 @@
 import { API_URL } from "../../lib/constants";
 import potato from "../../styles/movie-info.module.css";
-async function getMovie(id: string) {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+
+export async function getMovie(id: string) {
+  // await new Promise((resolve) => setTimeout(resolve, 2000));
   const response = await fetch(`${API_URL}/${id}`);
   return response.json();
 }
