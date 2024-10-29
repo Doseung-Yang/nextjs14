@@ -1,11 +1,6 @@
 import { API_URL } from "../(home)/page";
-<<<<<<< HEAD
-
-=======
-import styles from "../../styles/movie-viedos.module.css";
->>>>>>> a83c323 (hotpix:: movie data & CSS_Module 수정)
+import styles from "../../styles/movie-video.module.css";
 async function getVideos(id: string) {
-  console.log(`Fatching viedos: ${Date.now()}`);
   await new Promise((resolve) => setTimeout(resolve, 3000));
   //   throw new Error("something broke..."); 에러 발생시키기
   const response = await fetch(`${API_URL}/${id}/videos`);
@@ -14,9 +9,8 @@ async function getVideos(id: string) {
 
 export default async function MovieVideos({ id }: { id: string }) {
   const videos = await getVideos(id);
-<<<<<<< HEAD
   return <h6>{JSON.stringify(videos)}</h6>;
-=======
+
   return (
     <div className={styles.container}>
       {videos.map((video) => (
@@ -29,5 +23,4 @@ export default async function MovieVideos({ id }: { id: string }) {
       ))}
     </div>
   );
->>>>>>> a83c323 (hotpix:: movie data & CSS_Module 수정)
 }
